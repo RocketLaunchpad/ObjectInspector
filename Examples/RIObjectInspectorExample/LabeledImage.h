@@ -1,5 +1,5 @@
 //
-//  Image.m
+//  LabeledImage.h
 //  RIObjectInspectorExample
 //
 //  Copyright (c) 2020 Rocket Insights, Inc.
@@ -23,23 +23,15 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-#import "Image.h"
+#import <UIKit/UIKit.h>
 
-@interface Image ()
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, retain) UIImage *image;
+#import "BaseImage.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface LabeledImage : BaseImage
+@property (nonatomic, copy, readonly) NSString *name;
+- (instancetype)initWithName:(NSString *)name image:(UIImage *)image;
 @end
 
-@implementation Image
-
-- (instancetype)initWithName:(NSString *)name image:(UIImage *)image
-{
-    if (self = [super init])
-    {
-        self.name = name;
-        self.image = image;
-    }
-    return self;
-}
-
-@end
+NS_ASSUME_NONNULL_END

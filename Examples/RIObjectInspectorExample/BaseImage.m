@@ -1,6 +1,6 @@
 //
-//  Image.h
-//  RIObjectInspectorExample
+//  BaseImage.m
+//  RIObjectInspector
 //
 //  Copyright (c) 2020 Rocket Insights, Inc.
 //
@@ -23,14 +23,21 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseImage.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface Image : NSObject
-@property (nonatomic, copy, readonly) NSString *name;
-@property (nonatomic, retain, readonly) UIImage *image;
-- (instancetype)initWithName:(NSString *)name image:(UIImage *)image;
+@interface BaseImage ()
+@property (nonatomic, retain) UIImage *image;
 @end
 
-NS_ASSUME_NONNULL_END
+@implementation BaseImage
+
+- (instancetype)initWithImage:(UIImage *)image
+{
+    if (self = [super init])
+    {
+        self.image = image;
+    }
+    return self;
+}
+
+@end

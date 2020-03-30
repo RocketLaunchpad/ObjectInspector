@@ -23,8 +23,10 @@
 		C5FDA1EE243257D800298269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5FDA1ED243257D800298269 /* LaunchScreen.storyboard */; };
 		C5FDA1F1243257E400298269 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FDA1EF243257E400298269 /* MapViewController.swift */; };
 		C5FDA1F2243257E400298269 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FDA1F0243257E400298269 /* SampleData.swift */; };
-		C5FDA1F5243257EB00298269 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FDA1F4243257EB00298269 /* Image.m */; };
+		C5FDA1F5243257EB00298269 /* LabeledImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FDA1F4243257EB00298269 /* LabeledImage.m */; };
 		C5FDA1F7243257F300298269 /* RIObjectInspectorExample-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FDA1F6243257F300298269 /* RIObjectInspectorExample-Bridging-Header.h */; };
+		C6B4458724328C5100B4AAA1 /* BaseImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C6B4458524328C5100B4AAA1 /* BaseImage.h */; };
+		C6B4458824328C5100B4AAA1 /* BaseImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B4458624328C5100B4AAA1 /* BaseImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,9 +80,11 @@
 		C5FDA1ED243257D800298269 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5FDA1EF243257E400298269 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C5FDA1F0243257E400298269 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
-		C5FDA1F3243257EB00298269 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
-		C5FDA1F4243257EB00298269 /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		C5FDA1F3243257EB00298269 /* LabeledImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabeledImage.h; sourceTree = "<group>"; };
+		C5FDA1F4243257EB00298269 /* LabeledImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabeledImage.m; sourceTree = "<group>"; };
 		C5FDA1F6243257F300298269 /* RIObjectInspectorExample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RIObjectInspectorExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		C6B4458524328C5100B4AAA1 /* BaseImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseImage.h; sourceTree = "<group>"; };
+		C6B4458624328C5100B4AAA1 /* BaseImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,8 +188,10 @@
 			children = (
 				C5FDA1E9243257C900298269 /* AppDelegate.swift */,
 				C5FDA1EB243257CF00298269 /* Assets.xcassets */,
-				C5FDA1F3243257EB00298269 /* Image.h */,
-				C5FDA1F4243257EB00298269 /* Image.m */,
+				C6B4458524328C5100B4AAA1 /* BaseImage.h */,
+				C6B4458624328C5100B4AAA1 /* BaseImage.m */,
+				C5FDA1F3243257EB00298269 /* LabeledImage.h */,
+				C5FDA1F4243257EB00298269 /* LabeledImage.m */,
 				C52A636222F71F7900A0F7BA /* Info.plist */,
 				C5FDA1ED243257D800298269 /* LaunchScreen.storyboard */,
 				C5FDA1EF243257E400298269 /* MapViewController.swift */,
@@ -220,6 +226,7 @@
 				C5FDA1F7243257F300298269 /* RIObjectInspectorExample-Bridging-Header.h in Headers */,
 				C52A634422F71EB900A0F7BA /* RIObjectInspector.h in Headers */,
 				C5FDA1BB243256F400298269 /* ObjcExceptionHandler.h in Headers */,
+				C6B4458724328C5100B4AAA1 /* BaseImage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +366,7 @@
 				C5FDA1B7243256F400298269 /* Value.swift in Sources */,
 				C5FDA1BA243256F400298269 /* ObjectInspectorViewController.swift in Sources */,
 				C5FDA1B9243256F400298269 /* Mirror+Lookup.swift in Sources */,
+				C6B4458824328C5100B4AAA1 /* BaseImage.m in Sources */,
 				C5FDA1B8243256F400298269 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,7 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5FDA1EA243257C900298269 /* AppDelegate.swift in Sources */,
-				C5FDA1F5243257EB00298269 /* Image.m in Sources */,
+				C5FDA1F5243257EB00298269 /* LabeledImage.m in Sources */,
 				C5FDA1F2243257E400298269 /* SampleData.swift in Sources */,
 				C5FDA1F1243257E400298269 /* MapViewController.swift in Sources */,
 			);

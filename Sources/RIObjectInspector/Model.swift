@@ -99,18 +99,38 @@ class NSObjectModel: Model {
     }
 }
 
+private func readPropertyNames(for clazz: AnyClass) -> [String] {
+    if clazz == NSObject.self {
+        return []
+    }
+
+    var count: UInt32 = 0
+    guard let properties = class_copyPropertyList(clazz, &count) else {
+        return []
+    }
+
+    let buffer = UnsafeBufferPointer(start: properties, count: Int(count))
+    return buffer.compactMap { property -> String? in
+        return String(utf8String: property_getName(property))
+    }
+}
+
 private extension NSObject {
 
     class var propertyNames: [String] {
-        var count: UInt32 = 0
-        guard let properties = class_copyPropertyList(self, &count) else {
-            return []
+        var maybeClass: AnyClass? = self
+        var propertyNames: [String] = []
+
+        while true {
+            guard let aClass = maybeClass else {
+                break
+            }
+            propertyNames.append(contentsOf: readPropertyNames(for: aClass))
+
+            maybeClass = aClass.superclass()
         }
 
-        let buffer = UnsafeBufferPointer(start: properties, count: Int(count))
-        return buffer.compactMap { property -> String? in
-            return String(utf8String: property_getName(property))
-        }
+        return Array(Set(propertyNames)).sorted()
     }
 }
 
