@@ -23,6 +23,8 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
+import CoreLocation
+import RIObjectInspector
 import UIKit
 
 @UIApplicationMain
@@ -31,7 +33,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = ObjectInspectorViewController.inspecting(array: sampleData, delegate: self)
+        window?.makeKeyAndVisible()
         return true
+    }
+}
+
+extension AppDelegate: ObjectInspectorViewControllerDelegate {
+
+    func objectInspector(_ sender: ObjectInspectorViewController, customViewControllerForObject object: Any) -> UIViewController? {
+        guard let coord = object as? CLLocationCoordinate2D else {
+            return nil
+        }
+
+        let vc = MapViewController(location: coord)
+        vc.title = "Location"
+        return vc
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MapViewController.swift
 //  RIObjectInspectorExample
 //
 //  Copyright (c) 2020 Rocket Insights, Inc.
@@ -23,16 +23,35 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-import RIObjectInspector
+import MapKit
 import UIKit
 
-class ViewController: UIViewController {
+class MapViewController: UIViewController {
 
-    @IBOutlet var label: UILabel!
+    private let location: CLLocationCoordinate2D
+
+    private var mapView: MKMapView!
+
+    init(location: CLLocationCoordinate2D) {
+        self.location = location
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) not implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = RIObjectInspector.text
+        mapView = MKMapView(frame: view.bounds)
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+        view.addSubview(mapView)
+
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        mapView.addAnnotation(annotation)
+
+        mapView.setRegion(MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)), animated: false)
     }
 }
-

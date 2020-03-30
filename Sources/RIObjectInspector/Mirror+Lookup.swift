@@ -1,5 +1,5 @@
 //
-//  RIObjectInspector.swift
+//  Mirror+Lookup.swift
 //  RIObjectInspector
 //
 //  Copyright (c) 2020 Rocket Insights, Inc.
@@ -25,7 +25,13 @@
 
 import Foundation
 
-public struct RIObjectInspector {
+extension Mirror {
 
-    public static let text = "Hello, world"
+    var propertyNames: [String] {
+        return children.compactMap({ $0.label })
+    }
+
+    func value(for label: String) -> Value? {
+        return Value(value: children.first(where: { $0.label == label})?.value)
+    }
 }

@@ -1,6 +1,6 @@
 //
-//  RIObjectInspector.h
-//  RIObjectInspector
+//  Image.m
+//  RIObjectInspectorExample
 //
 //  Copyright (c) 2020 Rocket Insights, Inc.
 //
@@ -23,13 +23,23 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import "Image.h"
 
-//! Project version number for RIObjectInspector.
-FOUNDATION_EXPORT double RIObjectInspectorVersionNumber;
+@interface Image ()
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, retain) UIImage *image;
+@end
 
-//! Project version string for RIObjectInspector.
-FOUNDATION_EXPORT const unsigned char RIObjectInspectorVersionString[];
+@implementation Image
 
-// In this header, you should import all the public headers of your framework using statements like #import <RIObjectInspector/PublicHeader.h>
-#import <RIObjectInspector/ObjcExceptionHandler.h>
+- (instancetype)initWithName:(NSString *)name image:(UIImage *)image
+{
+    if (self = [super init])
+    {
+        self.name = name;
+        self.image = image;
+    }
+    return self;
+}
+
+@end

@@ -10,14 +10,21 @@
 		C52A633D22F71EB900A0F7BA /* RIObjectInspector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52A633322F71EB900A0F7BA /* RIObjectInspector.framework */; };
 		C52A634222F71EB900A0F7BA /* RIObjectInspectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52A634122F71EB900A0F7BA /* RIObjectInspectorTests.swift */; };
 		C52A634422F71EB900A0F7BA /* RIObjectInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = C52A633622F71EB900A0F7BA /* RIObjectInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C52A635722F71F7800A0F7BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52A635622F71F7800A0F7BA /* AppDelegate.swift */; };
-		C52A635922F71F7800A0F7BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52A635822F71F7800A0F7BA /* ViewController.swift */; };
-		C52A635C22F71F7800A0F7BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52A635A22F71F7800A0F7BA /* Main.storyboard */; };
-		C52A635E22F71F7900A0F7BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52A635D22F71F7900A0F7BA /* Assets.xcassets */; };
-		C52A636122F71F7900A0F7BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52A635F22F71F7900A0F7BA /* LaunchScreen.storyboard */; };
-		C52A636822F71FD200A0F7BA /* RIObjectInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52A636722F71FD200A0F7BA /* RIObjectInspector.swift */; };
 		C5FDA1AB243256AB00298269 /* RIObjectInspector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52A633322F71EB900A0F7BA /* RIObjectInspector.framework */; };
 		C5FDA1AC243256AB00298269 /* RIObjectInspector.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C52A633322F71EB900A0F7BA /* RIObjectInspector.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5FDA1B6243256F400298269 /* ObjcExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FDA1B0243256F400298269 /* ObjcExceptionHandler.m */; };
+		C5FDA1B7243256F400298269 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FDA1B1243256F400298269 /* Value.swift */; };
+		C5FDA1B8243256F400298269 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FDA1B2243256F400298269 /* Model.swift */; };
+		C5FDA1B9243256F400298269 /* Mirror+Lookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FDA1B3243256F400298269 /* Mirror+Lookup.swift */; };
+		C5FDA1BA243256F400298269 /* ObjectInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FDA1B4243256F400298269 /* ObjectInspectorViewController.swift */; };
+		C5FDA1BB243256F400298269 /* ObjcExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FDA1B5243256F400298269 /* ObjcExceptionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5FDA1EA243257C900298269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FDA1E9243257C900298269 /* AppDelegate.swift */; };
+		C5FDA1EC243257CF00298269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5FDA1EB243257CF00298269 /* Assets.xcassets */; };
+		C5FDA1EE243257D800298269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5FDA1ED243257D800298269 /* LaunchScreen.storyboard */; };
+		C5FDA1F1243257E400298269 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FDA1EF243257E400298269 /* MapViewController.swift */; };
+		C5FDA1F2243257E400298269 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FDA1F0243257E400298269 /* SampleData.swift */; };
+		C5FDA1F5243257EB00298269 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FDA1F4243257EB00298269 /* Image.m */; };
+		C5FDA1F7243257F300298269 /* RIObjectInspectorExample-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FDA1F6243257F300298269 /* RIObjectInspectorExample-Bridging-Header.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,13 +66,21 @@
 		C52A634122F71EB900A0F7BA /* RIObjectInspectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIObjectInspectorTests.swift; sourceTree = "<group>"; };
 		C52A634322F71EB900A0F7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C52A635422F71F7800A0F7BA /* RIObjectInspectorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RIObjectInspectorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C52A635622F71F7800A0F7BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C52A635822F71F7800A0F7BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C52A635B22F71F7800A0F7BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C52A635D22F71F7900A0F7BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C52A636022F71F7900A0F7BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C52A636222F71F7900A0F7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C52A636722F71FD200A0F7BA /* RIObjectInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIObjectInspector.swift; sourceTree = "<group>"; };
+		C5FDA1B0243256F400298269 /* ObjcExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcExceptionHandler.m; sourceTree = "<group>"; };
+		C5FDA1B1243256F400298269 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		C5FDA1B2243256F400298269 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C5FDA1B3243256F400298269 /* Mirror+Lookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mirror+Lookup.swift"; sourceTree = "<group>"; };
+		C5FDA1B4243256F400298269 /* ObjectInspectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectInspectorViewController.swift; sourceTree = "<group>"; };
+		C5FDA1B5243256F400298269 /* ObjcExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcExceptionHandler.h; sourceTree = "<group>"; };
+		C5FDA1E9243257C900298269 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C5FDA1EB243257CF00298269 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5FDA1ED243257D800298269 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C5FDA1EF243257E400298269 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C5FDA1F0243257E400298269 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		C5FDA1F3243257EB00298269 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		C5FDA1F4243257EB00298269 /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		C5FDA1F6243257F300298269 /* RIObjectInspectorExample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RIObjectInspectorExample-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +142,13 @@
 		C52A633522F71EB900A0F7BA /* RIObjectInspector */ = {
 			isa = PBXGroup;
 			children = (
+				C5FDA1B3243256F400298269 /* Mirror+Lookup.swift */,
+				C5FDA1B2243256F400298269 /* Model.swift */,
+				C5FDA1B5243256F400298269 /* ObjcExceptionHandler.h */,
+				C5FDA1B0243256F400298269 /* ObjcExceptionHandler.m */,
+				C5FDA1B4243256F400298269 /* ObjectInspectorViewController.swift */,
+				C5FDA1B1243256F400298269 /* Value.swift */,
 				C52A633622F71EB900A0F7BA /* RIObjectInspector.h */,
-				C52A636722F71FD200A0F7BA /* RIObjectInspector.swift */,
 				C52A633722F71EB900A0F7BA /* Info.plist */,
 			);
 			path = RIObjectInspector;
@@ -162,12 +182,15 @@
 		C52A635522F71F7800A0F7BA /* RIObjectInspectorExample */ = {
 			isa = PBXGroup;
 			children = (
-				C52A635622F71F7800A0F7BA /* AppDelegate.swift */,
-				C52A635822F71F7800A0F7BA /* ViewController.swift */,
-				C52A635A22F71F7800A0F7BA /* Main.storyboard */,
-				C52A635D22F71F7900A0F7BA /* Assets.xcassets */,
-				C52A635F22F71F7900A0F7BA /* LaunchScreen.storyboard */,
+				C5FDA1E9243257C900298269 /* AppDelegate.swift */,
+				C5FDA1EB243257CF00298269 /* Assets.xcassets */,
+				C5FDA1F3243257EB00298269 /* Image.h */,
+				C5FDA1F4243257EB00298269 /* Image.m */,
 				C52A636222F71F7900A0F7BA /* Info.plist */,
+				C5FDA1ED243257D800298269 /* LaunchScreen.storyboard */,
+				C5FDA1EF243257E400298269 /* MapViewController.swift */,
+				C5FDA1F6243257F300298269 /* RIObjectInspectorExample-Bridging-Header.h */,
+				C5FDA1F0243257E400298269 /* SampleData.swift */,
 			);
 			path = RIObjectInspectorExample;
 			sourceTree = "<group>";
@@ -194,7 +217,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5FDA1F7243257F300298269 /* RIObjectInspectorExample-Bridging-Header.h in Headers */,
 				C52A634422F71EB900A0F7BA /* RIObjectInspector.h in Headers */,
+				C5FDA1BB243256F400298269 /* ObjcExceptionHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,13 +293,14 @@
 				TargetAttributes = {
 					C52A633222F71EB900A0F7BA = {
 						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1140;
 					};
 					C52A633B22F71EB900A0F7BA = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 					C52A635322F71F7800A0F7BA = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -317,9 +343,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C52A636122F71F7900A0F7BA /* LaunchScreen.storyboard in Resources */,
-				C52A635E22F71F7900A0F7BA /* Assets.xcassets in Resources */,
-				C52A635C22F71F7800A0F7BA /* Main.storyboard in Resources */,
+				C5FDA1EC243257CF00298269 /* Assets.xcassets in Resources */,
+				C5FDA1EE243257D800298269 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C52A636822F71FD200A0F7BA /* RIObjectInspector.swift in Sources */,
+				C5FDA1B6243256F400298269 /* ObjcExceptionHandler.m in Sources */,
+				C5FDA1B7243256F400298269 /* Value.swift in Sources */,
+				C5FDA1BA243256F400298269 /* ObjectInspectorViewController.swift in Sources */,
+				C5FDA1B9243256F400298269 /* Mirror+Lookup.swift in Sources */,
+				C5FDA1B8243256F400298269 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,8 +375,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C52A635922F71F7800A0F7BA /* ViewController.swift in Sources */,
-				C52A635722F71F7800A0F7BA /* AppDelegate.swift in Sources */,
+				C5FDA1EA243257C900298269 /* AppDelegate.swift in Sources */,
+				C5FDA1F5243257EB00298269 /* Image.m in Sources */,
+				C5FDA1F2243257E400298269 /* SampleData.swift in Sources */,
+				C5FDA1F1243257E400298269 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,25 +396,6 @@
 			targetProxy = C5FDA1AD243256AB00298269 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C52A635A22F71F7800A0F7BA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C52A635B22F71F7800A0F7BA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C52A635F22F71F7900A0F7BA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C52A636022F71F7900A0F7BA /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C52A634522F71EB900A0F7BA /* Debug */ = {
@@ -605,6 +617,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HHWT4HF657;
 				INFOPLIST_FILE = "$(SRCROOT)/Examples/RIObjectInspectorExample/Info.plist";
@@ -615,6 +628,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RIObjectInspector.RIObjectInspectorExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Examples/RIObjectInspectorExample/RIObjectInspectorExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -624,6 +639,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HHWT4HF657;
 				INFOPLIST_FILE = "$(SRCROOT)/Examples/RIObjectInspectorExample/Info.plist";
@@ -634,6 +650,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RIObjectInspector.RIObjectInspectorExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Examples/RIObjectInspectorExample/RIObjectInspectorExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
