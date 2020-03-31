@@ -160,7 +160,7 @@ class DictionaryModel: Model {
 
     fileprivate init(dictionary: [AnyHashable: Any]) {
         self.dictionary = dictionary
-        propertyNames = dictionary.keys.map { $0.description }
+        propertyNames = dictionary.keys.map({ $0.description }).sorted()
     }
 
     func value(at index: Int) -> Value? {
