@@ -89,6 +89,9 @@ enum Value: CustomStringConvertible {
             return value.description
 
         case .object(let object):
+            if let csc = object as? CustomStringConvertible {
+                return csc.description
+            }
             return String(describing: type(of: object))
         }
     }
