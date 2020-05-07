@@ -105,4 +105,20 @@ enum Value: CustomStringConvertible {
             return false
         }
     }
+
+    var rawValue: Any {
+        switch self {
+        case .array(let result):
+            return result
+
+        case .dictionary(let result):
+            return result
+
+        case .object(let result):
+            return result
+
+        case .scalar(let result):
+            return result
+        }
+    }
 }

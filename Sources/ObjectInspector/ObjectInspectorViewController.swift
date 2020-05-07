@@ -33,6 +33,8 @@ public protocol ObjectInspectorViewControllerDelegate: AnyObject {
     @objc optional func objectInspector(_ sender: ObjectInspectorViewController, customViewControllerForDictionary dictionary: [AnyHashable: Any]) -> UIViewController?
 
     @objc optional func objectInspector(_ sender: ObjectInspectorViewController, customViewControllerForArray array: [Any]) -> UIViewController?
+
+    @objc optional func objectInspector(_ sender: ObjectInspectorViewController, customDescriptionForObject object: Any) -> String?
 }
 
 public class ObjectInspectorViewController: UITableViewController {
@@ -101,7 +103,9 @@ public class ObjectInspectorViewController: UITableViewController {
             UITableViewCell(style: .subtitle, reuseIdentifier: reuseIdentifier)
 
         cell.textLabel?.text = name
-        cell.detailTextLabel?.text = value?.description ?? "nil"
+        cell.detailTextLabel?.text = value.flatMap {
+            delegate?.objectInspector?(self, customDescriptionForObject: $0.rawValue) ?? $0.description
+        } ?? "(nil)"
 
         let isLeaf = value?.isLeaf ?? true
         cell.accessoryType = isLeaf ? .none : .disclosureIndicator

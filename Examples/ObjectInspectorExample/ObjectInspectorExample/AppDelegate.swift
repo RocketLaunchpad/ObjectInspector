@@ -51,4 +51,12 @@ extension AppDelegate: ObjectInspectorViewControllerDelegate {
         vc.title = "Location"
         return vc
     }
+
+    func objectInspector(_ sender: ObjectInspectorViewController, customDescriptionForObject object: Any) -> String? {
+        guard let place = object as? Place else {
+            return nil
+        }
+
+        return "Place: \(place.name)"
+    }
 }
