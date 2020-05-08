@@ -34,7 +34,7 @@ let package = Package(
             targets: ["ObjectInspector"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/RocketLaunchpad/ExceptionHandler", from: .init(stringLiteral: "1.0.0"))
+        .package(url: "https://github.com/RocketLaunchpad/ExceptionHandler", from: "1.0.0")
     ],
     targets: [
         .target(
